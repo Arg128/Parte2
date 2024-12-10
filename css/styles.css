@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background: #f5f5f5;
+  text-align: center; /* Centrar el texto y contenidos por defecto */
+}
+
+header {
+  background: #7A0012; /* Guinda */
+  color: #fff;
+  padding: 20px 0;
+}
+
+.site-title {
+  font-size: 2em;
+  margin: 0;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block; /* Para que el ul se ajuste al contenido y pueda centrarse */
+}
+
+.menu li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #f0c330;
+}
+
+.centered-container {
+  margin-top: 50px;
+}
+
+.logo-centered {
+  width: 200px; /* Incrementar el tamaño */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  margin-top: 0;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #7A0012; /* Guinda */
+  color: #fff;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
