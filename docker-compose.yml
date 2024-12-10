@@ -1,0 +1,38 @@
+version: '3'
+services:
+  db:
+    image: mariadb:latest
+    container_name: wikidb
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: miwikipedia
+      MYSQL_USER: wikiuser
+      MYSQL_PASSWORD: wikipass
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+      - wikidb_data:/var/lib/mysql
+    restart: always
+
+  web:
+    build: .
+    container_name: wikiweb
+    ports:
+      - "8080:80"
+    volumes:
+      - ./cgi-bin:/var/www/cgi-bin
+      - ./html:/var/www/html
+      - ./img:/var/www/html/img
+      - ./css:/var/www/html/css
+    environment:
+      DB_HOST: db
+      DB_NAME: miwikipedia
+      DB_USER: wikiuser
+      DB_PASS: wikipass
+    depends_on:
+      - db
+    restart: always
+
+volumes:
+  wikidb_data:
