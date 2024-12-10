@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Actualizar Artículo</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h2>Actualizar Artículo</h2>
+  <form action="/cgi-bin/update.pl" method="get" target="_blank">
+    <label for="owner">Owner (usuario):</label>
+    <input type="text" name="owner" id="owner"><br>
+    <label for="title">Título del Artículo:</label>
+    <input type="text" name="title" id="title"><br>
+    <label for="text">Nuevo Texto (Markdown):</label><br>
+    <textarea name="text" id="text" rows="10" cols="50"></textarea><br>
+    <input type="submit" value="Actualizar">
+  </form>
+</body>
+</html>
